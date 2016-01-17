@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{% block title %}{{ data['title'] }}{% endblock %}</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+
+  <script src="https://use.typekit.net/jdu5xov.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <link href="/assets/styles.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map');
+      var mapOptions = {
+        center: new google.maps.LatLng(44.5403, -78.5463),
+        zoom: 8,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas,mapOptions);
+    }
+  </script>
+
+  {% block head %}{% endblock %}
+</head>
+<body>
+  
+  <header>
+    <a href="/" id="logo"></a>
+    {% include "partials/nav.html" %}
+  </header>
+
+  
+  {% block content %}{% endblock %}
+
+  {% for filename in javascripts %}
+  <script type="text/javascript" src="/assets/{{ filename }}"></script>
+  {% endfor %}
+</body>
+</html>

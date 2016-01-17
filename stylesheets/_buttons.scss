@@ -1,0 +1,52 @@
+#{$all-buttons}, .button {
+  appearance: none;
+  background-color: $action-color;
+  border: 0;
+  border-radius: $base-border-radius;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: shade($action-color, 20%);
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+  
+  &.teal {
+    background: $teal;
+    color: #fff; 
+  }
+  
+  &.big {
+    font-size: 1.33rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0 1.5em;
+    &.rounded {
+      border-radius: 1.75rem;
+    }
+  }
+  
+  
+}

@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>My Title</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+
+  <script src="https://use.typekit.net/jdu5xov.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <link href="/assets/styles.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map');
+      var mapOptions = {
+        center: new google.maps.LatLng(44.5403, -78.5463),
+        zoom: 8,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas,mapOptions);
+    }
+  </script>
+
+  
+</head>
+<body>
+  
+  <header>
+    <a href="/" id="logo"></a>
+    <nav>
+  <ul>
+    <li><a href="#">Wydarzenia</a></li>
+    <li><a href="#">Galeria</a></li>
+    <li><a href="#">Cennik</a></li>
+    <li><a href="#">Cechy</a></li>
+    <li><a href="#">Oferta</a></li>
+    <li><a href="#">Przyjaciele</a></li>
+    <li><a href="#">Lokalizacja</a></li>
+  </ul>
+</nav>
+  </header>
+
+  
+  
+
+<div id="wrapper">
+
+<section id="first">
+  
+  <div id="photos">
+    <div class="photo" style="background-image: url(/assets/first.jpg)">&nbsp;</div>
+  </div>
+  
+</section>
+
+<section id="events">
+  
+  <div class="container">
+    
+    <h2><span>wydarzenia</span></h2>
+    
+    <div id="list-of-events">
+
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+      <div class="event">
+        <figure></figure>
+        <div class="text">
+          <div class="event-date">DD MMM RRRR</div>
+          <div class="event-title">Nazwa wydarzenia</div>
+        </div>            
+      </div>
+  
+  </div>
+  
+  </div>
+
+  <span href="#" id="events-prev" class="navigation-link prev"><span></span></span>
+  <span href="#" id="events-next" class="navigation-link next"><span></span></span>
+  
+</section>
+
+<section id="gallery">
+  
+  <div id="list-of-photos">
+    
+    <div class="photo" style="background-image: url(/assets/gallery/1.jpg)"></div>
+    <div class="photo" style="background-image: url(/assets/gallery/2.jpg)"></div>
+    <div class="photo" style="background-image: url(/assets/gallery/3.jpg)"></div>
+    
+  </div>
+
+  <span href="#" id="photos-prev" class="navigation-link prev"><span></span></span>
+  <span href="#" id="photos-next" class="navigation-link next"><span></span></span>
+    
+</section>
+
+<section id="prices">
+  
+  <div class="container">
+    
+    <h2><span>Proste zasady</span></h2>
+    <div id="price-list">
+      
+      <div class="price-option">
+        
+        <div class="heading">stawka <br>godzinowa</div>
+        <div class="price">
+          <div class="from">&nbsp;</div>
+          <div class="big">7</div>
+          <div class="pln">złotych</div>
+        </div>
+        <div class="description">przyjdź i pracuj <br>mamy dla ciebie biurko, <br>kawę / herbatę i przekąski</div>
+        
+      </div>
+
+      <div class="price-option">
+        
+        <div class="heading">pakiety <br>miesięczne</div>
+        <div class="price">
+          <div class="from">już od</div>
+          <div class="big">77</div>
+          <div class="pln">złotych</div>
+        </div>
+        <div class="description">zestaw usług i profitów <br>dla freelancerów <br>i małych firm</div>
+        
+      </div>
+
+      <div class="price-option">
+        
+        <div class="heading">wynajem <br>całego lokalu</div>
+        <div class="price">
+          <div class="from">już od</div>
+          <div class="big">350</div>
+          <div class="pln">złotych</div>
+        </div>
+        <div class="description">Cras justo odio, dapibus <br>ac facilisis in, egestas <br>eget quam sociis</div>
+        
+      </div>
+
+      
+    </div>
+    <div class="button-container"><a href="#" class="big teal rounded button">Poznaj pełny cennik</a></div>
+    
+  </div>
+  
+</section>
+
+<section id="features">
+
+  <div class="container">
+    <h3><span>Do twojej dyspozycji</span></h3>
+  </div>
+  
+  <ul id="list-of-features">
+    
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>centralna lokalizacja <br>na Starym Mieście</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>wygodne i estetyczne <br>meble</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>nieograniczony dostęp <br>do kawy, herbaty<br>i przekąsek</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>elastyczny <br>model rozliczania <br>coworkingu</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>salka konferencyjna <br>i mała salka spotkań</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>strefa <br>relaksu</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>schowki <br>na dokumenty <br>i sprzęty</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>dostęp <br>do infrastruktury <br>biurowej</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>wzorcownia <br>dla architektów <br>i designerów</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>elastyczny układ <br>przestrzenny</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>showroom <br>wzornictwa <br>i sztuki</p>
+    
+    </div></li>
+
+    <li class="feature"><div class="inside">
+    
+      <figure></figure>
+      <p>możliwość <br>zamówienia cateringu <br>i obsługi eventów</p>
+    
+    </div></li>
+
+  
+</section>
+
+<section id="about">
+  
+  <div class="container">
+
+    <h2><span>grobla7 to</span></h2>
+  
+    <nav>
+      <ol class="hashTabber-nav" data-hashtabber-id="about">
+        <li><a>Coworking</a></li>
+        <li><a>Przestrzeń biznesowa</a></li>
+        <li><a>Showroom</a></li>
+        <li><a>Wydarzenia</a></li>
+        <li><a>Wirtualne biuro</a></li>
+      </ol>
+    </nav>
+    
+  </div>
+
+  <ol class="hashTabber-data" data-hashtabber-id="about">
+              
+    <li class="tab" id="about-tab-1">
+    
+      <div class="container">
+        
+        <div class="gallery two-photos">
+          <figure></figure>
+          <figure></figure>  
+        </div>
+        
+        <h4>Coworking</h4>
+        <p class="lead">Coworking w grobli 7 to możliwość nawiązania nowych kontaktów w przyjaznym środowisku pracy i w otoczeniu dobrego designu.</p>     
+        <p>Stworzyliśmy dla Was przyjazną przestrzeń do wspólnej pracy. Zapewniamy szybkie łącze internetowe, obfitość gniazdek elektrycznych oraz nieograniczony dostęp do dobrej kawy, herbaty i przekąsek. Do waszej dyspozycji są salka konferencyjna, mała salka do rozmów z klientami, nieformalna strefa relaksu oraz infrastruktura biurowa (drukarka, tablice, flipcharty i rzutnik). Na miejscu znajduje się wzorcownia materiałów dla architektów i designerów. Stali użytkownicy pracowni mają możliwość założenia na miejscu adresu pocztowego oraz przechowywania własnego sprzętu lub dokumentów. Proponujemy Wam elastyczne rozliczanie godzinowe lub odpowiadający Waszym potrzebom typ abonamentu.</p>
+                  
+      </div>
+    
+    </li>
+  
+    <li class="tab" id="about-tab-2">
+    
+      <div class="container">
+        
+        <div class="gallery four-photos">
+          <figure></figure>
+          <figure></figure>  
+          <figure></figure>  
+          <figure></figure>  
+        </div>
+        
+        <h4>Przestrzeń biznesowa</h4>
+        <p class="lead">Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor.</p>     
+        <p>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.</p>
+                  
+      </div>
+    
+    </li>
+  
+    <li class="tab" id="about-tab-3">
+    
+      <div class="container">
+        
+        <div class="gallery four-photos">
+          <figure></figure>
+          <figure></figure>  
+          <figure></figure>  
+          <figure></figure>  
+        </div>
+        
+        <h4>Showroom</h4>
+        <p class="lead">Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor.</p>     
+        <p>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.</p>
+                  
+      </div>
+    
+    </li>
+  
+    <li class="tab" id="about-tab-4">
+    
+      <div class="container">
+        
+        <div class="gallery four-photos">
+          <figure></figure>
+          <figure></figure>  
+          <figure></figure>  
+          <figure></figure>  
+        </div>
+        
+        <h4>Wydarzenia</h4>
+        <p class="lead">Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor.</p>     
+        <p>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.</p>
+                  
+      </div>
+    
+    </li>
+  
+    <li class="tab" id="about-tab-5">
+    
+      <div class="container">
+        
+        <div class="gallery two-photos">
+          <figure></figure>
+          <figure></figure>  
+        </div>
+        
+        <h4>Wirtualne biuro</h4>
+        <p class="lead">Maecenas sed diam eget risus varius blandit sit amet non magna. Curabitur blandit tempus porttitor.</p>     
+        <p>Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Curabitur blandit tempus porttitor. Maecenas sed diam eget risus varius blandit sit amet non magna. Etiam porta sem malesuada magna mollis euismod. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor. Curabitur blandit tempus porttitor.</p>
+                  
+      </div>
+    
+    </li>
+  
+  </ol>
+  
+</section>
+
+<section id="who-works-here">
+  
+  <div class="container">
+    
+    <h3><span>Kto z nami pracuje</span></h3>
+    
+    <div class="row">
+      
+      <div class="partner">
+        
+        <figure></figure>
+        <h4>Name</h4>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        
+      </div>
+
+      <div class="partner">
+        
+        <figure></figure>
+        <h4>Name</h4>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        
+      </div>
+
+      <div class="partner">
+        
+        <figure></figure>
+        <h4>Name</h4>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        
+      </div>
+
+      <div class="partner">
+        
+        <figure></figure>
+        <h4>Name</h4>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        
+      </div>
+
+    
+  </div>
+    
+  </div>
+  
+</section>
+
+<section id="who-shows-here">
+  
+  <div class="container">
+    
+    <h3><span>wystawiają u nas</span></h3>
+    
+    <div class="row">
+      
+      <div class="partner">
+        
+        <figure></figure>
+        <h4>Name</h4>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        <div class="gallery">
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+        </div>
+        
+      </div>
+
+      <div class="partner">
+        
+        <figure></figure>
+        <h4>Name</h4>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        <div class="gallery">
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+        </div>
+        
+      </div>
+
+      <div class="partner">
+        
+        <figure></figure>
+        <h4>Name</h4>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        <div class="gallery">
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+          <figure><a href="#"></a></figure>
+        </div>
+        
+      </div>
+
+    
+  </div>
+  
+  </div>
+  
+</section>
+
+<section id="location">
+  
+  <div id="map"></div>
+  <div class="container">
+    
+    <div id="contact">
+      
+      <div class="contact-element">
+        <div class="big">ul. Grobla 7<br>61-111 Poznań</div>
+      </div>
+
+      <div class="contact-element">
+        <div class="label">telefon</div>
+        <div class="big">505 423 643</div>
+      </div>
+
+      <div class="contact-element">
+        <div class="label">e-mail</div>
+        <div class="big"><a href="mailto:hello@grobla7.com">hello@grobla7.com</a></div>
+      </div>
+
+      <div class="contact-element">
+        <div class="label">GPS</div>
+        <div class="big">N 52.40565<br>E 16.9388613</div>
+      </div>
+      
+    </div>
+    
+  </div>
+  
+</section>
+
+</div>
+
+
+
+  
+  <script type="text/javascript" src="/assets/app.3ca3ffda11041ac2b07f50ef22099192.js"></script>
+  
+</body>
+</html>

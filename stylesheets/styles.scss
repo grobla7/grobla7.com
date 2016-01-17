@@ -1,0 +1,494 @@
+$teal: #0083A3;
+$dark: #252E2E;
+$medium: #4A4A4A;
+$light: #EDEFF0;
+
+@import "mixins";
+@import "bourbon";
+@import "grid-settings";
+@import "base";
+@import "neat";
+@import "slick";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  overflow: hidden;
+}
+
+header {
+  position: fixed;
+  z-index: 1000000000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: $teal;
+  nav {
+    @include valign();
+    right: 40px;
+    ul {
+      @include clearfix();
+      li {
+        float: left;      
+        a {
+          display: block;
+          font-size: 1.222rem; // 18px * 1.222 = 22px
+          color: #fff;
+          line-height: 1.8em;
+          height: 1.8em;
+          padding: 0 1.33vw;
+          position: relative;
+        }
+        &:not(:last-child) a:after {
+          content: "";
+          position: absolute;
+          top:: 50%;
+          right: -2px;
+          background: shade($teal,50);
+          width: 4px;
+          height: 4px;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}
+
+section {
+  position: relative;
+  background: #fff;
+  .container {
+    @include outer-container(66rem);
+    position: relative;
+    padding: 5rem 0;
+  }  
+}
+
+#first {
+  height: 100vh;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  #photos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    .photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+}
+
+ 
+.navigation-link {
+  @include valign();
+  width: 100px;
+  height: 80px;
+  background-color: $teal;
+  display: block;
+  cursor: pointer;
+  &.prev {
+    left: -20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    @include transition(0.5s left);
+    &:hover {
+      left: -10px;
+      @include transition(0.5s left);
+    }
+    span {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin-left: 20px;
+      background-image: url(/assets/prev-white.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }    
+  }
+  &.next {
+    right: -20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    @include transition(0.5s right);
+    &:hover {
+      right: -10px;
+      @include transition(0.5s right);
+    }
+    span {
+      display: block;
+      width: 80px;
+      height: 80px;
+      background-image: url(/assets/next-white.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }    
+  }
+}
+
+.slick-dots {
+  width: auto;
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: $light;
+  padding: 0 1rem;
+  height: 1.556rem;
+  li {
+    display: inline-block;
+    width: 0.556rem;
+    height: 0.556rem;
+    margin: 0.5rem 0.25rem;
+    background: rgba($dark,0.2);
+    border-radius: 100%;
+    &.slick-active {
+      background: $teal;
+    }
+    button {
+      display: none;
+    }
+  }
+}
+
+
+
+#events {
+  margin-top: 90vh;
+  background: $light;
+  
+  #list-of-events {
+    padding-bottom: 4rem;
+  }
+  
+  .event {
+    width: 15.5rem;
+    margin: 0 1rem 0 0;
+    background: #fff;
+    figure {
+      margin: 0;
+      display: block;
+      width: 100%;
+      padding-top: 80%;
+      background: $medium;
+    }
+    .text {
+      padding: 1.5rem;
+      height: 9rem;
+      .event-date {
+        font-size: 0.9rem;
+        margin-bottom: 1em;
+        color: rgba($dark,0.5);
+      }
+      .event-title {
+        font-size: 1.1rem;
+        line-height: 1.1em;
+        font-weight: 500;
+      }
+    }
+  }
+  
+  .slick-dots {
+    @include halign();
+    bottom: 0;
+    background: shade($light,10%);    
+    li {
+
+    }
+    button {
+    }
+  }
+}
+
+
+#gallery {
+  background: $dark;
+  height: 100vh;
+  #list-of-photos {
+    .photo {
+      width: 100%;
+      height: 100vh;
+      background-size: cover;      
+    }
+  }
+  .slick-dots {
+    @include halign();
+    bottom: 3rem;
+  }
+
+}
+
+#prices {
+  background: $light;
+  #price-list {
+    @include display(flex);
+    justify-content: space-between;
+    align-items: stretch;
+    .price-option {
+      flex-basis: 30%; 
+      flex-grow: 0;
+      background: #fff;
+      padding: 2rem 0;
+      text-align: center;
+      .heading {
+        font-family: $heading-font-family;
+        font-size: 1.556rem;
+        line-height: 1.1em;
+        margin-bottom: 1em;
+      }
+      .price {
+        font-family: $heading-font-family;
+        margin-bottom: 1em;
+        .from {
+          font-size: 1.556rem;
+          line-height: 1.1em;
+          margin-bottom: 0.25em;
+          color: rgba($dark,0.5);
+        }
+        .big {
+          font-size: 6.66rem;
+          letter-spacing: -0.1ex;
+          line-height: 0.9em;
+        }        
+        .pln {
+          font-size: 1.556rem;
+          line-height: 1.1em;
+        }
+      }
+      .description {
+        line-height: 1.2em;
+      }
+      
+    }
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 3rem;
+  }
+}
+
+#features {
+  background: $light;
+  #list-of-features {
+    @include display(flex);
+    flex-wrap: wrap;
+    align-items: stretch;
+    .feature {
+      flex-basis: 25%; 
+      background: $teal;
+      position: relative;;
+      .inside {
+        width: 100%;
+        padding: 5% 0 15%;
+        figure {
+          margin: 0 auto 1rem;
+          display: block;
+//          background: rgba(0,0,0,0.1);
+          width: 50%; 
+          &:after {
+            content:"";
+            display: block;
+            width: 100%;
+            padding-top: 80%;
+          }
+        }
+        p {
+          margin: 0;
+          font-size: 1.1rem;
+          line-height: 1.1em;
+          color: #fff;
+          text-align: center;
+        }
+      }
+    }
+
+    $gradient: #0083A3 #00799B #007195 #00678D #007FA0 #007598 #006C91 #006189 #007A9C #007095 #00678D #005C85; 
+
+    @for $i from 1 through 12 {
+      .feature:nth-child(#{$i}) {
+        background: nth($gradient,$i);         
+      }
+    }      
+    
+  }
+}
+
+#about {
+  background: $light;
+  > .container {
+    padding-bottom: 0;
+  }
+  nav {
+    ol {
+      @include display(flex);
+      align-items: flex-end;
+      font-size: 1.33rem;
+      height: 3em;
+      li {
+        flex-grow: 1;
+        a {
+          display: block;
+          text-align: center;
+          font-family: $heading-font-family;
+          height: 2.8em;
+          line-height: 2.8em;
+          color: #fff;
+          @include transition(0.33s height);
+          &:hover {
+            height: 3.1em;
+            @include transition(0.33s height);
+          }
+        }
+        @for $i from 10 through 1 {
+          &:nth-child(#{$i}) {
+            background: rgba($dark, 1 - 0.1 * $i);         
+          }
+        }      
+        &.active {
+          a {
+            height: 3.33em;
+            line-height: 3.33em;
+            background: #fff;
+            color: $teal;          
+          }
+        }
+      }
+    }
+  }
+  .tab {
+    background: #fff;
+    .container {
+      padding-left: 30vw;
+      position: relative;
+      .gallery {
+        position: absolute;
+        left: 0;
+        @include valign();
+        width: 25vw;
+        background: #ccc;
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          padding-top: 66%;
+        }
+      }
+    }
+  }
+}
+
+// --------------------------------------------------
+// hashTabber basic styles
+// Basically it is better to create kinda-theme class
+// insted of changing this document
+// --------------------------------------------------
+
+ol.hashTabber-nav, ol.hashTabber-data {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol.hashTabber-data {
+    > li {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+#location {
+  height: 600px;
+  position: relative;
+  background: $light;
+  #map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 600px;
+    width: 100%;
+  }
+  .container {
+    position: relative;
+    height: 600px;
+    #contact {
+      width: 360px;
+      padding: 3em 30px;
+      @include valign();
+      background: $teal;
+      .contact-element {
+        margin-bottom: 1.5em;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .label {
+          color: shade($teal,66);
+          font-size: 1.5rem;
+          margin-bottom: 0.25rem;
+        }
+        .big {
+          font-family: $heading-font-family;
+          color: #fff;
+          font-size: 2rem;
+          line-height: 1.1em;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+#who-works-here {
+  
+  .row {
+    
+    @include display(flex);
+    justify-content: space-between;
+    align-items: stretch;
+        
+    .partner {
+      
+      flex-basis: 20%;
+      
+    }
+    
+  }
+  
+}
+
+#who-shows-here {
+  
+  .row {
+    
+    @include display(flex);
+    justify-content: space-between;
+    align-items: stretch;
+        
+    .partner {
+      
+      flex-basis: 28%;
+      
+    }
+    
+  }
+  
+}
+

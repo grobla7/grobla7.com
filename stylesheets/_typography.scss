@@ -1,0 +1,113 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-feature-settings: "kern", "liga", "pnum";
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: $base-font-size;
+  line-height: $heading-line-height;
+  margin: 0;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 3.556rem;
+  line-height: 1em;
+  text-align: center;
+  margin: 0 0 1.66em;
+  text-transform: lowercase;
+  span {
+    position: relative;
+    display: inline-block;
+    &:after {
+      content:"";
+      background: $teal;
+      @include halign();
+      height: 4px;
+      width: 10rem;      
+      bottom: -0.66em;
+    }
+  }
+}
+
+h3 {
+  font-size: 2.667rem;
+  line-height: 1em;
+  text-align: center;
+  margin: 0 0 1.66em;
+  text-transform: lowercase;
+  span {
+    position: relative;
+    padding: 0 1.5em;
+    display: inline-block;
+    &:before {
+      content:"";
+      background: $teal;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include transform(translate(-50rem,-50%));
+      height: 4px;
+      width: 50rem;      
+    }
+    &:after {
+      content:"";
+      background: $teal;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      @include transform(translate(50rem,-50%));
+      height: 4px;
+      width: 50rem;      
+    }
+  }
+}
+
+h4 {
+  color: $teal;
+  font-size: 1.556rem;
+  margin-bottom: 0.5em; 
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+p.lead {
+  font-size: 1.667rem;
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
