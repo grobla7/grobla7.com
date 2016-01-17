@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  
+  <script src="https://use.typekit.net/owy8spo.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  
+  <link rel="stylesheet" href="/assets/styles.css">
+
+  <%= render "partials/head.html.erb" %>
+</head>
+<body lang="en">
+  <%= render "partials/header.html.erb" %>
+  <%= yield %> 
+  <%= render "partials/footer.html.erb" %>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+  
+  <script src="/assets/main.js"></script>
+
+</body>
+</html>
